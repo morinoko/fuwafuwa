@@ -1,19 +1,8 @@
-<p id="notice"><%= notice %></p>
+<% if notice.present? %>
+	<p class="alert alert-success"><%= notice %></p>
+<% end %>
 
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @post.name %>
-</p>
-
-<p>
-  <strong>Content:</strong>
-  <%= @post.content %>
-</p>
+<%= render 'post', post: @post %>
 
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
