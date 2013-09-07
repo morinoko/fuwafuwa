@@ -1,5 +1,7 @@
 Fuwafuwa::Application.routes.draw do
-  resources :posts
+  resources :posts do
+  	resources :comments
+  end
 
   get 'about' => 'pages#about'
   

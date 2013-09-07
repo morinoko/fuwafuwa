@@ -1,8 +1,9 @@
 <h2>
   <%= link_to post.title, post %>
-</h2>
+</h2> 
 
-<p class="text-info">
+
+<p class="text-success">
   By: <%= post.name %>
 </p>
 
@@ -12,6 +13,11 @@
 
 <p class="text-muted">
   <small>
-    Posted on: <%= post.created_at.to_formatted_s(:long) %>
-  </small>
+    Posted on: <%= post.created_at.to_formatted_s(:long) %>  
+  </small>  
+  <span class="label label-info">
+	  <%= post.comments.count %>
+	  <span class="glyphicon glyphicon-comment"></span>
+  </span>
 </p>
+
