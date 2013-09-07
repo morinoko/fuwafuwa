@@ -1,5 +1,9 @@
+<%= will_paginate @posts %>
+
 <% @posts.each do |post| %>
 	<%= render 'posts/post', post: post  %>
 	
 	</br></br>
 <% end %>
+
+<%= will_paginate @posts %>

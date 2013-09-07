@@ -3,7 +3,8 @@ class PostsController < ApplicationController
 
   # GET /posts
   def index
-    @posts = Post.all
+    @posts = Post.paginate :per_page => 10, :page => params[:page]
+    						
   end
 
   # GET /posts/1
