@@ -13,18 +13,33 @@
 
 <body>
 	<div class="container">
-		<div class="page-header">
+		<div class="page-header hidden-xs">
 			<ul class="nav nav-pills pull-right">
 			  	<li><%= link_to "Home", root_url %></li> 
 			  	<li><%= link_to "Posts", posts_url %></li>
 			  	<li class="active"><%= link_to "Write!", new_post_path %></li>
 			 </ul>
-			 
-			 <h1>
-				<%= link_to 'ふわふわ〜', root_url %>
+
+			 <h1 class="hidden-xs">
+				<%= link_to 'ふわふわ', root_url %>
 				<small>// Japan-a-merika</small>
-			 </h1> 
+			 </h1>
 		</div>
+
+<!-- hmtl for mobile navigation -->		
+		<div class="page-header visible-xs">
+			<ul class="nav nav-pills">
+			    <li class="active"><%= link_to "Write!", new_post_path %></li>
+			  	<li><%= link_to "Post List", posts_url %></li>
+			 </ul>
+			 <hr/>
+			 <h1 class="visible-xs">
+				<%= link_to 'ふわふわ〜', root_url %></br>
+				<small>// Japan-a-merika</small>
+			 </h1>
+		</div>
+<!-- end html for mobile navigation -->
+		
 		<div class="row">
 			<div class="col-md-6 col-md-offset-3">
 				<%= yield %>
