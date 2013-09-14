@@ -5,8 +5,8 @@
 	  <strong><%= comment.commenter %></strong>
 	</span>
     <%= comment.body %>
-    <small><%= link_to 'Delete', [comment.post, comment],
+    <small><%= link_to '削除', [comment.post, comment],
   								  method: :delete,
-  								  data: { confirm: 'Are you sure?' } %></small>
+  								  data: { confirm: '本当に消すの？' } %></small>
   </p>
 <% end %>
