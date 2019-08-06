@@ -4,7 +4,7 @@ ruby '2.0.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0.beta1'
 gem 'bootstrap-sass', '~> 2.3.2.2'
-gem 'will_paginate', '~> 3.0.0'
+gem 'will_paginate', '~> 3.0.5'
 
 group :development do
 	gem 'sqlite3', '1.3.7'
